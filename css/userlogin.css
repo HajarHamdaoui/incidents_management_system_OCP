@@ -243,7 +243,7 @@ body {
         right: 0;
     }
 
-    .container.sign-in .col.sign-up {
+    .container.sign-in .col.change-password {
         transform: translateY(100%);
     }
 
