@@ -243,9 +243,9 @@ body {
         right: 0;
     }
 
-    /* .container.sign-in .col.sign-up {
+    .container.sign-in .col.sign-up {
         transform: translateY(100%);
-    } */
+    }
 
     .container.sign-in .col.sign-in,
     .container.change-password .col.change-password {
