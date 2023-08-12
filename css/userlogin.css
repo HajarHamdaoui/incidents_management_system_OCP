@@ -288,7 +288,7 @@ body {
     }
 
     .text h2 {
-        margin: 0rem;
+        margin: -5px;
         font-size: 1.5rem;
     }
     .myform{
