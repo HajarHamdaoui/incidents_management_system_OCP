@@ -293,5 +293,7 @@ body {
     }
     .form-wrapper{
         height:60%;
+        position:absolute;
+        top:20%;
     }
 }
