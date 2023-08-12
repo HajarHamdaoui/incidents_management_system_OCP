@@ -292,8 +292,6 @@ body {
         font-size: 1.5rem;
     }
     .sign-in, .password{
-        height:60%;
-        position:relative;
-        top:20%;
+        display:none
     }
 }
