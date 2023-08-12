@@ -268,7 +268,7 @@ body {
         background-color: var(--white);
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
-        transform: translateY(101%);
+        transform: translateY(102%);
         transition: 1s ease-in-out;
     }
 
