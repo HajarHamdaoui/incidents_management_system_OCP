@@ -291,7 +291,10 @@ body {
         margin: .5rem;
         font-size: 1.5rem;
     }
-    .sign-in, .password{
-        display:none
+    .myform{
+        position: relative;
+        top: 20%;
+        height: 60vh;
+
     }
 }
