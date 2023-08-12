@@ -293,6 +293,5 @@ body {
     }
 }
 .sign-in , .change-password{
-    position : absolute ; 
-    top :20vh;
+    display:none;
 }
