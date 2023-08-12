@@ -253,7 +253,7 @@ body {
     }
 
     .content-row {
-        align-items: center !important;
+        align-items: flex-start !important;
     }
 
     .content-row .col {
@@ -264,6 +264,7 @@ body {
     .col {
         width: 100%;
         position: absolute;
+        top:20%;
         padding: 2rem;
         background-color: var(--white);
         border-top-left-radius: 2rem;
