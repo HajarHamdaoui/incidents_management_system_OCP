@@ -253,7 +253,7 @@ body {
     }
 
     .content-row {
-        align-items: flex-start !important;
+        align-items: center !important;
     }
 
     .content-row .col {
