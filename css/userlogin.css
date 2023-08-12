@@ -292,9 +292,9 @@ body {
         font-size: 1.5rem;
     }
     .myform{
-        position: relative;
+        position: absolute;
         top: 20%;
-        height: 60vh;
+
 
     }
 }
