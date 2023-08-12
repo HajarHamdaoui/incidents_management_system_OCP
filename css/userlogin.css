@@ -291,7 +291,7 @@ body {
         margin: .5rem;
         font-size: 1.5rem;
     }
-    .form-wrapper{
+    .sign-in, .password{
         height:60%;
         position:relative;
         top:20%;
