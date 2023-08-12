@@ -266,10 +266,9 @@ body {
         position: absolute;
         padding: 2rem;
         background-color: var(--white);
-        max-height:20%;
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
-        transform: translateY(100%);
+        transform: translateY(50%);
         transition: 1s ease-in-out;
     }
 
