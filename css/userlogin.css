@@ -293,7 +293,7 @@ body {
     }
     .form-wrapper{
         height:60%;
-        position:absolute;
+        position:relative;
         top:20%;
     }
 }
