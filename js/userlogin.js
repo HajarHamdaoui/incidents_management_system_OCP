@@ -31,7 +31,7 @@ const containerHTML =
 		<div class="form-wrapper align-items-center">
 			<div class="form sign-in">
 				<div>
-					<img src="LOGO.svg" style = "background-color:transparent" class = "logo" alt="">
+					<img src="../imgs/LOGO.svg" style = "background-color:transparent" class = "logo" alt="">
 				</div>						
 				<div class="input-group">
 					<i class='bx bxs-user'></i>
@@ -159,6 +159,7 @@ function move() {
 							container.innerHTML=containerHTML;
 							toggle = () => {
 								container.classList.toggle('sign-in')
+						
 								container.classList.toggle('change-password')
 							}
 							

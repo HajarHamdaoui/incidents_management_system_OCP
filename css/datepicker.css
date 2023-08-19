@@ -1,0 +1,14 @@
+.flatpickr-day.selected {
+    background-color: #138b08; /* Change this to the color you want */
+    color: white; /* Change this to a suitable text color */
+  }
+  .flatpickr-day:hover, .flatpickr-day.selected:hover{
+    background-color: #71c569;
+    color: white; 
+  }
+ 
+  .flatpickr-input {
+    font-weight: bold;
+    padding:4px 0;
+    text-align: center;
+  }

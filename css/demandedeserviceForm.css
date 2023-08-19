@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300;400&display=swap");
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik', sans-serif; 
+*/
+*{
+    box-sizing: border-box;
+
+}
+.display-none{
+  display:none;
+}
+.dmd-container {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9b9b9b;
+}
+
+.second-container {
+  margin-top: 5rem;
+  width: 60%;
+  min-width: 300px;
+  max-width: 700px;
+  background: #fff;
+  border: 1px solid gray;
+}
+
+.header {
+  background-color: #eee;
+}
+
+#title {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin: 0;
+  padding-bottom: 0.2rem;
+}
+
+#description {
+  text-align: center;
+  border-bottom: 2px solid rgba(83, 142, 66, 0.555);
+  margin-top: 0;
+  padding-bottom: 1.5rem;
+  font-family: "Rubik", sans-serif;
+}
+
+form {
+  margin: 10px;
+}
+.field-container{
+  display: flex;
+  margin : 10px 0;
+}
+.quill-container{
+  margin:10px 0 ;
+}
+.description-label{
+  text-align: start;
+
+}
+#titre{
+  width: 80%;
+  margin: 3px;
+  padding: 4px 0;
+}
+.account-image{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+}
+label{
+  white-space:nowrap;
+  width:40%;
+}
+.date-picker{
+  display:flex ;
+  gap:5rem;
+
+  margin:10px 0;
+}
+/*DROP DOWN START */
+ /* The container must be positioned relative: */
+ .custom-select {
+    position: relative;
+    font-family: Arial;
+    height:80%;
+    border-radius: 10px;
+    margin-bottom:6px;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: #0bad135c;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: #5ea161;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgb(13, 102, 28);
+
+  } 
+/*DROP DOWN END*/
+
+legend {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color:#0b6b10;
+  font-weight:bolder;
+  display:flex;
+  gap: 4px
+}
+fieldset {
+    border: 2px solid green;
+    margin-bottom:30px;
+  }
+
+
+.field-container{
+    display:flex;
+    gap:5rem;
+    height:40px;
+    align-items: center;
+}
+.field-container:hover{
+    background-color: #42f12737;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: grid;
+  grid-template-columns: 25% auto;
+  gap: 0.5em;
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+label:hover,
+label:focus-within {
+  background-color: #42f12737;
+  border-radius: 1rem;
+}
+
+input[type="radio"] {
+}
+
+#submit {
+  display: block;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  min-width: 150px;
+  width: 50%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#submit:hover {
+  background-color: #45AA4A;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  overflow: scroll;
+  resize: vertical;
+  min-height: 10rem;
+}
+.rotate-icon{
+transform:rotate(-90deg);
+
+}
+
+
+/*TEXT EDITOR */
+.ql-editor {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+
+
+
+  /* Style the toolbar buttons */
+  .ql-toolbar button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 2px;
+    cursor: pointer;
+  }
