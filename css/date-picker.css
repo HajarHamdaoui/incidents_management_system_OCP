@@ -1,0 +1,26 @@
+.datetime-picker-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .datetime-picker-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }
+  
+  .datetime-picker-box.show {
+    display: block;
+  }
+  
+  #picker-confirm {
+    display: block;
+    margin-top: 5px;
+  }
+  

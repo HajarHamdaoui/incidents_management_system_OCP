@@ -14,6 +14,7 @@
 
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
+
     <title>Demande de service</title>
 </head>
 <body>
@@ -111,49 +112,138 @@
             <label for="">Emplacement de livraison : </label>
             <div name="emplacements" class="searchable-dropdown" id="searchable-dropdown">
               <div class="searchable-dropdown-group">
-                 <span class="searchable-dropdown-arrow"></span>
-                 <select name="emplacement" id="emplacement" class="dropdown">
-                    <option disabled>Selectionner votre emplacement</option>
-                    <option value="Casablanca">Casablanca</option>
-                    <option value="Khouribga">Khouribga</option>
-                    <option value="Boucraa">Boucraa</option>
-                    <option value="Youssoufia">Youssoufia</option>
-                    <option value="Safi">Safi</option>
-                 </select>
+                <span class="searchable-dropdown-arrow"></span>
+                <select name="emplacement" id="emplacement" class="dropdown" id ="dropdown">
+                   <option disabled>Selectionner l'emplacement de la livraison</option>
+                </select>
               </div>
             </div>     
           </div>  
           <div class ="date-picker">
             <label for="date" >
-              Dateet heure de création : 
+              Date et heure de création : 
             </label>
               <input type="text" id="datetime-picker2" placeholder="Select date and time">   
-            </div>          
-   
-
-
-
+            </div>
+            <div class="field-container">
+              <label>Méthode de contact 
+                </label>
+                <div class="custom-select" style="width:200px;">
+                  <select>
+                    <option name = "methode_de_contact" value="email">email</option>
+                    <option name = "methode_de_contact" value="email">email</option>
+                    <option name = "methode_de_contact" value="téléphone">téléphone</option>
+                  </select>
+                </div>
+          </div>
+          <div class="quill-container">
+            <label class ="remarques-label"for="editor" >Remarques : </label>
+            <div id="editor-remarques"></div>
+        </div>
     </fieldset>
       <fieldset>
-        <legend><i class="fa-solid fa-chevron-down"></i>What packages are you interested in?</legend>
-        <label><input type="checkbox" value="ozone-treatment">Ozone Treatment</label>
-        <label><input type="checkbox" value="diet-plans">Diet Plans</label>
-        <label><input type="checkbox" value="exercise-workouts">Exercise Workouts</label>
+        <legend><i class="fa-solid fa-chevron-down"></i>Classification</legend>
+
+          <div id="wrapwrap">
+            <div class="field-container">
+                <label>Priorité
+                  </label>
+                  <div class="custom-select" style="width:200px;">
+                    <select>
+                      <option name = "etat" value="p1">p1 (Important)</option>
+                      <option name = "etat" value="p2">p2 (Modéré) </option>
+                      <option name = "etat" value="p3">p3 (Léger) </option>
+                      <option name = "etat" value="p4">p4 (Minime) </option>
+                    </select>
+                  </div>
+            </div>
+            </div>
+            <div id="wrapwrap" style=" height:40px; margin-bottom:40px">
+              <div class="field-container" >
+                  <label>Urgence
+                    </label>
+                    <div class="custom-select" style="width:300px; height:40px">
+                      <select>
+                        <option disabled>degré d'urgence</option>
+                        <option name = "urgence" value="Urgence Mineure">Le problème ne m'empêche pas de terminer mon travail</option>
+                        <option name = "urgence" value="Urgence Modérée">Le problème pourrait ralentir ma progression</option>
+                        <option name = "urgence" value="Urgence Moyenne">Le problème entrave significativement ma capacité à travailler  </option>
+                        <option name = "urgence" value="Urgence Majeure">Le problème m'empêche complètement de continuer mon travail </option>
+                      </select>
+                    </div>
+              </div>
+              </div>
+              <div class="field-container">
+                <label for="">catégorie : </label>
+                <div name="emplacements" class="searchable-dropdown" id="searchable-dropdown1">
+                  <div class="searchable-dropdown-group" id="searchable-dropdown-group1">
+                    <span class="searchable-dropdown-arrow" id="searchable-dropdown-arrow1"></span>
+                    <select name="catégorie" id="catégorie" class="dropdown1">
+                       <option disabled>Selectionner la catégorie</option>
+                    </select>
+                  </div>
+                </div>     
+              </div> 
+              <div class="field-container">
+                <label for="">Type d'action : </label>
+                <div name="actions" class="searchable-dropdown" id="searchable-dropdown2">
+                  <div class="searchable-dropdown-group" id="searchable-dropdown-group2">
+                    <span class="searchable-dropdown-arrow" id="searchable-dropdown-arrow2"></span>
+                    <select name="action" id="action" class="dropdown2">
+                       <option disabled>Selectionner le type d'action</option>
+                    </select>
+                  </div>
+                </div>     
+              </div> 
+              <div class="field-container" >
+                <label>Etendue  :
+                  </label>
+                  <div class="custom-select" style="width:200px; height:40px">
+                    <select>
+                      <option disabled>Etendue</option>
+                      <option name = "etendue" value="publique">Publique</option>
+                      <option name = "etendue" value="privé Modérée">Privé</option>
+                    </select>
+                  </div>
       </fieldset>
       <fieldset>
-        <legend><i class="fa-solid fa-chevron-down"></i>Have something to say?</legend>
+        <legend><i class="fa-solid fa-chevron-down"></i>Offre de catalogue</legend>
+        <div class="field-container">
+          <label for="">Nom du demandeur : </label>
+          <div class="account-container">
+            <img src="../imgs/userIcon.png" class = "account-image" alt=""> <h4>Compte Personnel</h4>         
+        </div>
+        </div>
+        <div class="field-container">
+          <label for="">Adresee email du demandeur : </label>
+          <div name="adresse_email">user@gmail.com</div>
+          </div>
+          <div class="field-container">
+            <label for="">Emplacement du demandeur : </label>
+            <div name="emplacements" class="searchable-dropdown" id="searchable-dropdown3">
+              <div class="searchable-dropdown-group3">
+                <span class="searchable-dropdown-arrow"></span>
+                <select name="emplacement_demandeur" id="emplacement_demandeur" class="dropdown3" id ="dropdown3">
+                   <option disabled>Selectionner votre emplacement</option>
+                </select>
+              </div>
+            </div>     
+          </div> 
+      </fieldset>
+      <fieldset>
+        <legend><i class="fa-solid fa-chevron-down"></i>Affectation</legend>
+
+      </fieldset>
+      <fieldset>
+        <legend><i class="fa-solid fa-chevron-down"></i>Abonnés</legend>
           <textarea name="additional-comments" id="additional-comments" cols="30" rows="10"></textarea>
       </fieldset>
       <fieldset>
-        <legend><i class="fa-solid fa-chevron-down"></i>Have something to say?</legend>
+        <legend><i class="fa-solid fa-chevron-down"></i>Résolution</legend>
           <textarea name="additional-comments" id="additional-comments" cols="30" rows="10"></textarea>
       </fieldset>
       <fieldset>
-        <legend><i class="fa-solid fa-chevron-down"></i>Have something to say?</legend>
-          <textarea name="additional-comments" id="additional-comments" cols="30" rows="10"></textarea>
-      </fieldset>
-      <fieldset>
-        <legend><i class="fa-solid fa-chevron-down"></i>Have something to say?</legend>
+        <legend><i class="fa-solid fa-chevron-down"></i>Pièces-jointes</legend>
           <textarea name="additional-comments" id="additional-comments" cols="30" rows="10"></textarea>
       </fieldset>
       <input type="submit" id="submit" value="Submit">
@@ -165,12 +255,18 @@
 
 <script src="../js/textEditor.js"></script>
 <script src="../js/demandeDeService.js"></script>
-<script src="../js/searchabledropdown.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
-<script src="../js/datepicker.js">
+<script src="../js/datepicker.js"></script>
+<script src="../js/fetchEmplacement.js"></script>
 
-</script>
+
+
+
+
+
+
+
 </body>
 
 </html>

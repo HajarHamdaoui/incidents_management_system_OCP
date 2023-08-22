@@ -1,8 +1,33 @@
+document.write("<script src='../js/searchabledropdown.js'></script>");
+  fetch('../data/emplacement.json')
+    .then(response => response.json())
+    .then(data => {
+      const selectElement = document.getElementById('emplacement_demandeur');
+      data.emplacements.forEach(emplacement => {
+        const option = document.createElement('option');
+        option.value = emplacement;
+        option.textContent = emplacement;
+        selectElement.appendChild(option);
+      });
+    }).then(()=>{  dropdown("3");})
+  .catch(error => console.error('Une erreur est survenue :', error));
 
-function dropdown(i){
 
-    const form = document.getElementById(`searchable-dropdown${i}`);
-const dropdowns = document.querySelectorAll(`.dropdown${i}`);
+  fetch('../data/emplacement.json')
+    .then(response => response.json())
+    .then(data => {
+      const selectElement = document.getElementById('emplacement');
+      data.emplacements.forEach(emplacement => {
+        console.log(emplacement);
+        const option = document.createElement('option');
+        option.value = emplacement;
+        option.textContent = emplacement;
+        selectElement.appendChild(option);
+      });
+    }).then(()=>{
+
+const form = document.getElementById("searchable-dropdown");
+const dropdowns = document.querySelectorAll(".dropdown");
 console.log(dropdowns)
 
 // Check if Dropdowns are Exist
@@ -37,7 +62,6 @@ function createCustomDropdown(dropdown) {
    selected.classList.add("dropdown-select");
    selected.textContent = optionsArr[0].textContent;
    selected.style.color="white";
-
    customDropdown.appendChild(selected);
 
    // Create Element for Dropdown Menu
@@ -136,7 +160,7 @@ function filterItems(itemsArr, menu) {
    // Get Value of Search Input
    // Get Filtered Items
    // Get the Indexes of Filtered Items
-   const customOptions = menu.querySelectorAll(`#searchable-dropdown${i} .dropdown-menu-inner div`);
+   const customOptions = menu.querySelectorAll(".dropdown-menu-inner div");
    const value = this.value.toLowerCase();
    const filteredItems = itemsArr.filter((item) =>
       item.value.toLowerCase().includes(value)
@@ -167,4 +191,43 @@ function closeIfClickedOutside(menu, e) {
    }
 }
 
-}
+  })
+  .catch(error => console.error('Une erreur est survenue :', error));
+
+
+
+  fetch('../data/catégories.json')
+  .then(response => response.json())
+  .then(data => {
+    const selectElement = document.getElementById('catégorie');
+    data.catégories.forEach(category => {
+      console.log(category);
+      const option = document.createElement('option');
+      option.value = category;
+      option.textContent = category;
+      selectElement.appendChild(option);
+    });
+  }).then(()=>{
+    dropdown("1");
+
+  })
+  .catch(error => console.error('Une erreur est survenue :', error));
+
+
+
+  fetch('../data/actions.json')
+  .then(response => response.json())
+  .then(data => {
+    const selectElement = document.getElementById('action');
+    data.actions.forEach(action => {
+      const option = document.createElement('option');
+      option.value = action;
+      option.textContent = action;
+      selectElement.appendChild(option);
+    });
+  }).then(()=>{
+    dropdown("2");
+
+  })
+  .catch(error => console.error('Une erreur est survenue :', error));
+

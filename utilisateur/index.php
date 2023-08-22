@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>user login</title>
     <link rel="stylesheet" href="../css/userlogin.css">
+	<style>
+		body{
+			background-color:white;
+			background-image:none;
+		}
+	</style>
 </head>
 <body>
 	<div id="loader" class="loader-wrapper">
@@ -60,13 +68,12 @@
 
 		</div>
 	</div>
-	<div id="container" class="container ">
-	
 
-	</div>
 
  
-    <script src="../js/userlogin.js"></script> 
+    <script src="../js/loading.js"></script>
+
+
 </body>
 </html>
 
