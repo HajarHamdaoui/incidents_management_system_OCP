@@ -144,11 +144,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_profil'] =  $result_row["user_profil"];
         $_SESSION['gender'] =  $result_row["gender"];
         $_SESSION['user_image'] =  $result_row["user_image"];
+		if($result_row['is_RH'] == true){
+			echo "
+		<script>
+			window.open('../RH/interface_RH.php','_self');
+		</script>
+		";}
+		else{
 		echo "
 		<script>
-			window.open('../utilisateur/interface_util.php','_blank');
+			window.open('../utilisateur/interface_util.php','_self');
 		</script>
-		";
+		";}
 
 
 

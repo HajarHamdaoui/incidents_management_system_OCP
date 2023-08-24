@@ -231,3 +231,16 @@ function closeIfClickedOutside(menu, e) {
   })
   .catch(error => console.error('Une erreur est survenue :', error));
 
+  
+  fetch('../data/postes.json')
+    .then(response => response.json())
+    .then(data => {
+      const selectElement = document.getElementById('poste');
+      data.postes.forEach(poste => {
+        const option = document.createElement('option');
+        option.value = poste;
+        option.textContent = poste;
+        selectElement.appendChild(option);
+      });
+    }).then(()=>{  dropdown("4");})
+  .catch(error => console.error('Une erreur est survenue :', error));

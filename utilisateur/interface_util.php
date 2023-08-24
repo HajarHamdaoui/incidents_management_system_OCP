@@ -31,7 +31,7 @@ session_start();
                 <li><a href="#">
                   
                   <div class="account-container">
-                      <img src=<?php echo "../imgs/usersImages/".$_SESSION['user_image'] ?> class = "logo-image" alt=""> <h3><?php echo $_SESSION['user_last_name']." ".$_SESSION['user_first_name'];  ?></h3>
+                      <img src=<?php echo "../imgs/usersImages/".$_SESSION["user_image"] ?> class = "logo-image" alt=""> <h3><?php echo $_SESSION['user_last_name']." ".$_SESSION['user_first_name'];  ?></h3>
                   </div>
               </a></li>  
 
@@ -54,7 +54,7 @@ session_start();
               <div class="info">
                 <div class="sub">Demande de Service</div>
                 <div class="title"> Vos besoins, notre action : Transformez vos demandes en solutions..</div>
-                <button class="btn">Demander</button>
+                <button class="btn" id="demandeservice">Demander</button>
               </div>
               <div class="image">
                 <i class="fa-solid fa-bell-concierge"></i>              </div>
@@ -104,6 +104,6 @@ session_start();
           </div>
         </div>
       </div>
-      
+      <script src="../js/interface_util.js"></script>
 </body>
 </html>

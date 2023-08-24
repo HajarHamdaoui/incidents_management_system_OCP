@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +21,9 @@
     <title>Demande de service</title>
 </head>
 <body>
+
+
+
   <nav class="navbar">
     <div class="navbar-container container">
         <input type="checkbox" name="" id="">
@@ -34,10 +40,18 @@
             <li><a href="#">Mode Admin</a></li>
             <li><a href="#">  
               <div class="account-container">
-                  <img src="../imgs/userIcon.png" class = "logo-image" alt=""> <h3>Compte Personnel</h3>
+                  <img src=<?php echo "../imgs/usersImages/".$_SESSION["user_image"] ?> class="logo-image" alt=""> 
+                  <h3><?php echo $_SESSION["user_last_name"]." ".$_SESSION["user_first_name"] ?></h3>
               
               </div>
           </a></li>   
+          <li>
+             <a href="../utilisateur/interface_util.php" class="home-link">
+            <div class="account-container">
+             <i class="fas fa-home"></i> 
+            </div>
+            </a>
+            </li>
 
         </ul>
         <div class = "logo-container">

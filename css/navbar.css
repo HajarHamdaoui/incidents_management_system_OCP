@@ -56,9 +56,10 @@
   bottom:7px;
   font-size:1.25rem;
 }
+  
 .logo-image{
   position:relative;
-bottom: 5px;
+  bottom: 5px;
   width:40px;
   height:40px;
   border-radius:50%;
