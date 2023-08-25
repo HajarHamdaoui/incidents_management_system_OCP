@@ -34,9 +34,9 @@ session_start();
         </div>
         <ul class="menu-items">
                         
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Facebook</a></li>
+         <li><a href="https://www.ocpgroup.ma/fr/Contact-us">Contact</a></li>
+            <li><a href="https://fr.linkedin.com/company/ocp">LinkedIn</a></li>
+            <li><a href="https://fr-fr.facebook.com/OCPGroupMA/">Facebook</a></li>
             <li><a href="#">Mode Admin</a></li>
             <li><a href="#">  
               <div class="account-container">
