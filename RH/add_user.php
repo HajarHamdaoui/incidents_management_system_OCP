@@ -73,16 +73,12 @@ session_start();
     
     <div class="header">
       <h1 id="title">Informations nouvel employé</h1>
-      <!-- <p id="description">A utiliser quand le service demandé ne figure pas dans le catalogue.</p> -->
     </div>
     <form action="" id="survey-form">
         <fieldset>
             <legend> <i class="fa-solid fa-chevron-down"></i>Details de l'employé :</legend>
             <div id="wrapwrap">
-                <!-- <div class="field-container">
-                    <label for="Matricule">Matricule OCP</label>
-                    <input type="matricule" name="matricule" id="titre">
-                </div>  -->
+               
             <div class="field-container">
               <label for="titre">Nom</label>
               <input type="text" name="nom" id="titre">
@@ -141,25 +137,6 @@ session_start();
                 </div>     
               </div> 
       
-
-                <!-- <div class ="date-picker">
-                  <label for="date" >
-                    Date de naissance : 
-                  </label>
-                    <input type="text" id="date-picker" placeholder="Ajout date de naissance">   
-                </div> -->
-              <!-- <div class="field-container">
-                <label for="">Crée par : </label>
-                <div class="account-container">
-                  <img src="../imgs/userIcon.png" class = "account-image" alt=""> <h4>Compte Personnel</h4>         
-              </div>
-              </div> -->
-            <!-- <div class="field-container">
-                <label for="">Demandé pour : </label>
-                <div class="account-container">
-                  <img src="../imgs/userIcon.png" class = "account-image" alt=""> <h4>Compte Personnel</h4>         
-                </div>
-            </div> -->
               <div class="field-container">
                 <label for="">Local</label>
                 <div name="emplacements" class="searchable-dropdown" id="searchable-dropdown">
@@ -167,11 +144,6 @@ session_start();
                      <span class="searchable-dropdown-arrow"></span>
                      <select name="emplacement" id="emplacement" class="dropdown">
                         <option disabled>Selection de l'emplacement</option>
-                        <option value="Casablanca">Casablanca</option>
-                        <option value="Khouribga">Khouribga</option>
-                        <option value="Boucraa">Boucraa</option>
-                        <option value="Youssoufia">Youssoufia</option>
-                        <option value="Safi">Safi</option>
                      </select>
                   </div>
                 </div>     
@@ -246,6 +218,15 @@ session_start();
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
 <script src="../js/datepicker.js"></script>
+
+<?php
+
+?>
+
+
+
+
+
 
 </body>
 
