@@ -1,6 +1,9 @@
 <?php
 session_start();
+include("../includes/connect.php");
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +77,7 @@ session_start();
     <div class="header">
       <h1 id="title">Informations nouvel employé</h1>
     </div>
-    <form action="" id="survey-form">
+    <form method="post" action="" id="survey-form">
         <fieldset>
             <legend> <i class="fa-solid fa-chevron-down"></i>Details de l'employé :</legend>
             <div id="wrapwrap">
@@ -109,14 +112,14 @@ session_start();
                 <input type="date" name="date" id="titre">
             </div>            
             <div class="field-container">
-                <label for="Civilité">Sexe</label>
-                <div name="Civilité" class="searchable-dropdown" id="searchable-dropdown">
+                <label for="civilité">Sexe</label>
+                <div name="civilité" class="searchable-dropdown" id="searchable-dropdown">
                   <div class="searchable-dropdown-group">
                      <span class="searchable-dropdown-arrow"></span>
-                     <select name="Civilité" id="Civilité" class="dropdown">
+                     <select name="civilité" id="civilité" class="dropdown">
                         <option disabled>Selection </option>
-                        <option value="">Femme</option>
-                        <option value="">Homme</option>
+                        <option value="Femme">Femme</option>
+                        <option value="Homme">Homme</option>
                      </select>
                   </div>
                 </div>     
@@ -126,12 +129,12 @@ session_start();
                 <div name="permis de conduire" class="searchable-dropdown" id="searchable-dropdown">
                   <div class="searchable-dropdown-group">
                      <span class="searchable-dropdown-arrow"></span>
-                     <select name="permis de conduire" id="permis de conduire" class="dropdown">
+                     <select name="permis" id="permis de conduire" class="dropdown">
                         <option disabled>Selection permis de conduire</option>
-                        <option value="Casablanca">Aucun</option>
-                        <option value="Khouribga">B</option>
-                        <option value="Boucraa">C</option>
-                        <option value="Youssoufia">D</option>
+                        <option value="Aucun">Aucun</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
                      </select>
                   </div>
                 </div>     
@@ -156,7 +159,7 @@ session_start();
        
       <legend> <i class="fa-solid fa-chevron-down"></i>Poste occupé au sein de l' OCP :</legend>
       <div class="field-container">
-        <label for="Civilité">Poste :</label>
+        <label for="">Poste :</label>
         <div name="postes" class="searchable-dropdown" id="searchable-dropdown4">
               <div class="searchable-dropdown-group4">
                 <span class="searchable-dropdown-arrow"></span>
@@ -169,7 +172,7 @@ session_start();
        
       </fieldset>
 
-      <fieldset>
+      <!-- <fieldset>
         <legend><i class="fa-solid fa-chevron-down"></i>Catégorisation et Affectation :</legend>
        
           <div class="field-container">
@@ -187,21 +190,13 @@ session_start();
             </div>     
           </div>
           
-      </fieldset>
+      </fieldset> -->
 
       <fieldset>
         <legend><i class="fa-solid fa-chevron-down"></i>Ajouter plus d'Informations sur l'employé :</legend>
-          <textarea name="additional-comments" id="additional-comments" cols="30" rows="10"></textarea>
+          <textarea name="additional_comments" id="additional-comments" cols="30" rows="10"></textarea>
       </fieldset>
 
-
-     
-
-
-     
-
-
-    
 
       <input type="submit" id="submit" value="Soumission">
 
@@ -220,7 +215,33 @@ session_start();
 <script src="../js/datepicker.js"></script>
 
 <?php
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+  echo "2 !";
+  $user_last_name = $_POST["nom"];
+  $user_first_name = $_POST["prenom"];
+  $user_cin = $_POST["cin"];
+  $user_email = $_POST["email"];
+  $user_phone = $_POST["numéro_de_téléphone"];
+  $user_adress = $_POST["adresse"];
+  $user_birth_date = $_POST["date"];
+  $user_sexe = $_POST["civilité"];
+  $user_drivers_license = $_POST["permis"];
+  $user_emplacement = $_POST["emplacement"];
+  $user_post = $_POST["poste"];
+  $user_description = $_POST["additional_comments"];
+   echo $user_birth_date;
 
+ $insert_query="INSERT INTO user (first_name,last_name,user_email,user_phone,gender,CIN,birth_date,postal_adresse,drivers_license,poste,emplacement,user_description) VALUES ('".$user_first_name."','".$user_last_name."','".$user_email."','".$user_phone."','".$user_sexe."','".$user_cin."','".$user_birth_date."','".$user_adress."','".$user_drivers_license."','".$user_post."','".$user_emplacement."','".$user_description."');";
+  $result_insert = mysqli_query($conn,$insert_query);
+  
+ 
+
+if ($result_insert) {
+  echo "<script>location.href='../RH/interface_RH.php';</script>";
+} else {
+  echo "Error: " . mysqli_error($connection);
+}
+}
 ?>
 
 

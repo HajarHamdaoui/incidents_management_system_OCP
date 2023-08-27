@@ -31,7 +31,7 @@ session_start();
             <!-- <li><a href="#">Mode Admin</a></li> -->
             <li> 
               <div class="account-container">
-                  <img src=<?php echo" ../imgs/usersImages/".$_SESSION["user_image"] ?> class = "logo-image" alt=""> <h3><?php echo $_SESSION['user_last_name']." ".$_SESSION['user_first_name']; ?></h3>
+                <img src=<?php echo" ../imgs/usersImages/".$_SESSION["user_image"] ?> class = "logo-image" alt=""> <h3><?php echo $_SESSION['user_last_name']." ".$_SESSION['user_first_name']; ?></h3>
               
               </div>
             </li> 

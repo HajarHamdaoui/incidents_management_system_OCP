@@ -3,7 +3,7 @@ function dropdown(i){
 
     const form = document.getElementById(`searchable-dropdown${i}`);
 const dropdowns = document.querySelectorAll(`.dropdown${i}`);
-console.log(dropdowns)
+
 
 // Check if Dropdowns are Exist
 // Loop Dropdowns and Create Custom Dropdown for each Select Element

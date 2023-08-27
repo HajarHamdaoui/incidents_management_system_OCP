@@ -86,8 +86,8 @@ let chevronDowns = document.querySelectorAll(".fa-chevron-down");
 let fieldContainers=document.querySelectorAll("#wrapwrap");
 let fieldSets = document.querySelectorAll("fieldset");
 
-console.log(fieldSets);
-console.log(chevronDowns);
+
+
 for(let i = 0;  i<7;i++)
 {
     chevronDowns[i].onclick=()=>{

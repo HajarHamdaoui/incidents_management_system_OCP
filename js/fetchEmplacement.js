@@ -18,7 +18,7 @@ document.write("<script src='../js/searchabledropdown.js'></script>");
     .then(data => {
       const selectElement = document.getElementById('emplacement');
       data.emplacements.forEach(emplacement => {
-        console.log(emplacement);
+       
         const option = document.createElement('option');
         option.value = emplacement;
         option.textContent = emplacement;
@@ -28,7 +28,7 @@ document.write("<script src='../js/searchabledropdown.js'></script>");
 
 const form = document.getElementById("searchable-dropdown");
 const dropdowns = document.querySelectorAll(".dropdown");
-console.log(dropdowns)
+
 
 // Check if Dropdowns are Exist
 // Loop Dropdowns and Create Custom Dropdown for each Select Element
@@ -201,7 +201,7 @@ function closeIfClickedOutside(menu, e) {
   .then(data => {
     const selectElement = document.getElementById('catégorie');
     data.catégories.forEach(category => {
-      console.log(category);
+      
       const option = document.createElement('option');
       option.value = category;
       option.textContent = category;
