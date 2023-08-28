@@ -50,6 +50,20 @@ font-family: 'Rubik', sans-serif;
 form {
   margin: 10px;
 }
+.etat {
+  color : white;
+  font-weight: bold;
+  background-color: #0bad135c;
+  text-align: center;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 20px;
+  width:200px;
+
+}
 .field-container{
   display: flex;
   margin : 10px 0;

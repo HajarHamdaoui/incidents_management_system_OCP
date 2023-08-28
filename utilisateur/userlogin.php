@@ -137,6 +137,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </script>";
 
         $result_row = mysqli_fetch_assoc($result_select);
+		$_SESSION['user_id'] = $result_row["user_id"];
         $_SESSION['user_first_name'] = $result_row["first_name"];          
         $_SESSION['user_last_name'] =  $result_row["last_name"];
         $_SESSION['user_email'] =  $result_row["user_email"];
@@ -144,6 +145,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_profil'] =  $result_row["user_profil"];
         $_SESSION['gender'] =  $result_row["gender"];
         $_SESSION['user_image'] =  $result_row["user_image"];
+
+
 		if($result_row['is_RH'] == true){
 			echo "
 		<script>
