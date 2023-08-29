@@ -203,7 +203,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   $methode_contact = $_POST["methode_contact"];
   $urgence = $_POST["urgence"];
   $categorie = $_POST["catégorie"];
-  $insert_query="INSERT INTO user (titre,demandé_par,demandé_pour,date_de_création,emplacement,contact_method,urgence,categorie) VALUES ('".$titre."','".$demandé_par."','".$demandé_pour."','".$date_de_création."','".$emplacement."','".$methode_contact."','".$urgence."','".$categorie."');";
+  $insert_query="INSERT INTO service (titre,demandé_par,demandé_pour,date_de_création,emplacement,contact_method,urgence,categorie) VALUES ('".$titre."','".$demandé_par."','".$demandé_pour."','".$date_de_création."','".$emplacement."','".$methode_contact."','".$urgence."','".$categorie."');";
   $result_insert = mysqli_query($conn , $insert_query);
 
   if ($result_insert) {
@@ -214,7 +214,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 }
-
 ?>
 </body>
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    
+.hidden {
+	display: none;
+  }
+  
+  .overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+  }
+  
+  .confirm-box {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .confirm-content {
+	text-align: center;
+  }
+  
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="showConfirm"  class= "ms-button">Show Confirm Box</button>
+
+    <div id="confirmBox" class="hidden">
+      <div class="confirm-content">
+        <p>Are you sure you want to continue?</p>
+        <button id="confirmYes">Yes</button>
+        <button id="confirmNo">No</button>
+      </div>
+    </div> </div>
+<script>
+    document.getElementById('showConfirm').addEventListener('click', function() {
+	document.getElementById('confirmOverlay').classList.remove('hidden');
+  });
+  
+  document.getElementById('confirmYes').addEventListener('click', function() {
+	alert('Confirmed!');
+	document.getElementById('confirmOverlay').classList.add('hidden');
+  });
+  
+  document.getElementById('confirmNo').addEventListener('click', function() {
+	alert('Cancelled.');
+	document.getElementById('confirmOverlay').classList.add('hidden');
+  });
+  
+</script>
+</body>
+</html>
