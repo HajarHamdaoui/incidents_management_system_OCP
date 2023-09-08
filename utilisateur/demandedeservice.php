@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("../includes/connect.php");
-
+include("../includes/SLACalcul.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +18,22 @@ include("../includes/connect.php");
     <link rel="stylesheet" href="../css/datepicker.css">
 
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <style>
+      .submit {
+  display: block;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  min-width: 150px;
+  width: 50%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+    </style>
+
 
 
     <title>Demande de service</title>
@@ -81,17 +97,19 @@ include("../includes/connect.php");
             Titre
           </label>
           <input type="text" name="titre" id="titre">
-        </div>           
+        </div>
+                   
             <div class="quill-container">
                 <label class ="description-label"for="editor" >Description</label>
-                <div id="editor" name="description"></div>
+                <div id="editor" ></div>
+                <input type="text" name="détail" id="detail_hidden_input" style="display:none">
             </div>
           
           <div class="field-container">
             <label name="demandé_par" for="">Crée par : </label>
             <div class="account-container">
-            <input style="visibility:hidden;height:0" name="createur" value=<?php echo $_SESSION["user_email"] ?> >
-              <img src=<?php  echo $_SESSION["user_image"] ?> class = "account-image" alt=""> <h4><?php echo $_SESSION["user_last_name"]." ".$_SESSION["user_first_name"] ?></h4>         
+            <input style="visibility:hidden;height:0; width:0" name="createur" value=<?php echo $_SESSION["user_email"] ?> >
+              <img src=<?php  echo "../imgs/usersImages/".$_SESSION["user_image"] ?> class = "account-image" alt=""> <h4><?php echo $_SESSION["user_last_name"]." ".$_SESSION["user_first_name"] ?></h4>         
           </div>
           </div>
           <div class="field-container">
@@ -121,23 +139,18 @@ include("../includes/connect.php");
               <div class="searchable-dropdown-group">
                 <span class="searchable-dropdown-arrow"></span>
                 <select name="emplacement" id="emplacement" class="dropdown" id ="dropdown">
-                   <option disabled>Selectionner l'emplacement de la livraison</option>
+                   <option value=<?php echo $_SESSION["emplacement"]  ?>> <?php echo $_SESSION["emplacement"] ?></option>
+                   
                 </select>
               </div>
             </div>     
           </div>  
-          <div class ="date-picker">
-            <label for="date" >
-              Date et heure de création : 
-            </label>
-              <input type="text" name="date_creation" id="datetime-picker2" placeholder="Select date and time">   
             </div>
             <div class="field-container">
               <label>Méthode de contact 
                 </label>
                 <div class="custom-select" style="width:200px;">
                   <select name="methode_contact">
-                    <option name = "methode_de_contact" value="email">email</option>
                     <option name = "methode_de_contact" value="email">email</option>
                     <option name = "methode_de_contact" value="téléphone">téléphone</option>
                   </select>
@@ -155,10 +168,10 @@ include("../includes/connect.php");
                     <div name="state" class="custom-select" style="width:300px; height:40px">
                       <select name="urgence">
                         <option disabled>degré d'urgence</option>
-                        <option name = "urgence" value="Urgence Mineure">Le problème ne m'empêche pas de terminer mon travail</option>
-                        <option name = "urgence" value="Urgence Modérée">Le problème pourrait ralentir ma progression</option>
-                        <option name = "urgence" value="Urgence Moyenne">Le problème entrave significativement ma capacité à travailler  </option>
-                        <option name = "urgence" value="Urgence Majeure">Le problème m'empêche complètement de continuer mon travail </option>
+                        <option name = "urgence" value="mineur">Le problème ne m'empêche pas de terminer mon travail</option>
+                        <option name = "urgence" value="modéré">Le problème pourrait ralentir ma progression</option>
+                        <option name = "urgence" value="moyen">Le problème entrave significativement ma capacité à travailler  </option>
+                        <option name = "urgence" value="majeur">Le problème m'empêche complètement de continuer mon travail </option>
                       </select>
                     </div>
               </div>
@@ -179,7 +192,7 @@ include("../includes/connect.php");
       
      
      
-      <input type="submit" id="submit" value="Soumission">
+      <input type="submit"  class ="submit" id="submit" value="Soumission" onclick="myFunction()">
     </form>
   </div>
 </div>
@@ -195,26 +208,64 @@ include("../includes/connect.php");
 
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+  $receivedContent = htmlspecialchars($_POST["détail"], ENT_QUOTES, 'UTF-8');
+  $receivedContent= str_replace("'", "--apostrophe--",$receivedContent);
   $titre = $_POST["titre"];
   $demandé_par = $_POST["createur"];
   $demandé_pour = $_POST["demandé_pour"];
-  $date_de_création = $_POST["date_creation"];
-  $emplacement = $_POST["emplacement"];
+  $emplacement = str_replace("'", "<apostrophe/>",$_POST["emplacement"]);
   $methode_contact = $_POST["methode_contact"];
   $urgence = $_POST["urgence"];
-  $categorie = $_POST["catégorie"];
-  $insert_query="INSERT INTO service (titre,demandé_par,demandé_pour,date_de_création,emplacement,contact_method,urgence,categorie) VALUES ('".$titre."','".$demandé_par."','".$demandé_pour."','".$date_de_création."','".$emplacement."','".$methode_contact."','".$urgence."','".$categorie."');";
+  $categorie = str_replace("'", "<apostrophe/>",$_POST["catégorie"]);
+  $date_de_création=date("Y-m-d H:i:s");
+  $search_query="SELECT * FROM `user` where user_email='".$demandé_pour."';";
+  $result_search=mysqli_query($conn,$search_query);
+  $user_info=mysqli_fetch_assoc($result_search);
+  function extractStringAfterDoubleUnderscore($inputString) {
+    $delimiter = "__";
+    $parts = explode($delimiter, $inputString);
+    
+    if (count($parts) > 1) {
+        return $parts[1];
+    } else {
+        return false; 
+    }
+}
+$user_poste_degree= extractStringAfterDoubleUnderscore($user_info["poste"]);
+echo $user_poste_degree;
+$sla = calculateSLA_service_personnalisé($user_poste_degree,$urgence);
+echo $sla;
+$select_l0_groups_query="SELECT * FROM groupes where niveau = 'L0'";
+$result_select_l0_groups = mysqli_query($conn,$select_l0_groups_query);
+$groups="";
+while($group_row = mysqli_fetch_assoc($result_select_l0_groups)){
+  $groups=$groups."__".$group_row["name"];
+  
+}
+$groups=$groups."__";
+$groups= str_replace("'", "<apostrophe/>",$groups);
+
+  $insert_query="INSERT INTO services (SLA, titre,demandé_par,demandé_pour,emplacement,contact_method,urgence,categorie,details,état,date_de_création,groupes_affectation ) VALUES ('".$sla."','".$titre."','".$demandé_par."','".$demandé_pour."','".$emplacement."','".$methode_contact."','".$urgence."','".$categorie."','".$receivedContent."','open','".$date_de_création."','".$groups."');";
   $result_insert = mysqli_query($conn , $insert_query);
+
+
+
 
   if ($result_insert) {
     echo "<script>location.href='../utilisateur/interface_util.php';</script>";
+ 
   } else {
-    echo "Error: " . mysqli_error($connection);
+    echo "Error: " . mysqli_error($conn);
   }
 
 
 }
+
 ?>
+
 </body>
+
 
 </html>

@@ -7,6 +7,69 @@ font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
 
 }
+.speech-bubble {
+	background: #8ae485;
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+	position: relative;
+	text-align: center;
+	padding: 20px;
+	margin: 20px 30px;
+	width: 580px;
+	border-radius: 10px;
+}
+.speech-bubble2{
+  background: #c8d97b;
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+	position: relative;
+	text-align: center;
+	padding: 20px;
+	margin: 20px 100px;
+	width: 400px;
+	border-radius: 10px;
+
+}
+.speech-bubble2 h3{
+  font-size:15px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 50%;
+	right: 100%;
+	margin-top: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #8ae485;
+}
+.speech-bubble2:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 50%;
+	right: 100%;
+	margin-top: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #c8d97b;
+}
+
+.viewers{
+  margin-left:20px;
+}
+.viewers-wrapper{
+ display:block;
+
+}
 .display-none{
   display:none;
 }
@@ -69,12 +132,17 @@ form {
   margin : 10px 0;
 }
 .quill-container{
-  margin:10px 0 ;
+  margin:5px 0 ;
 }
+.justification-wrap ::placeholder {
+  color: red; /* Change the color to red */
+}
+
 .description-label{
   text-align: start;
 
 }
+
 #titre{
   width: 80%;
   margin: 3px;
@@ -85,6 +153,7 @@ form {
   height:30px;
   border-radius:50%;
 }
+
 
 .date-picker{
   display:flex ;
@@ -199,10 +268,27 @@ label:focus-within {
   border-radius: 1rem;
 }
 
-input[type="radio"] {
+
+.cordonnées{
+  margin:0 20px;
+  padding:10px;
+
+}
+.cordonnées:hover{
+  background-color: #42f12737;
+
+}
+.viewers-label{
+  padding:20px 0;
+  padding-left:10px;
+  display:flex;
+  justify-content : start;
+
+  align-items:center;
+  
 }
 
-#submit {
+.submit {
   display: block;
   background-color: #4caf50;
   color: white;
@@ -257,8 +343,6 @@ transform:rotate(-90deg);
     width:40%;
   }
   @media screen and (max-width:883px) {
-    .second-container{
-      width:100%;
-    }
+
     
   }

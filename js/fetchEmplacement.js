@@ -238,8 +238,8 @@ function closeIfClickedOutside(menu, e) {
       const selectElement = document.getElementById('poste');
       data.postes.forEach(poste => {
         const option = document.createElement('option');
-        option.value = poste;
-        option.textContent = poste;
+        option.value = `${poste.poste}__${poste.importance}`;
+        option.textContent = poste.poste;
         selectElement.appendChild(option);
       });
     }).then(()=>{  dropdown("4");})

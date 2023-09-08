@@ -1,5 +1,4 @@
 
-const container = document.getElementById("container");
 const loader = document.getElementById("loader");
 const oLetter = document.getElementById("o");
 const cLetter = document.getElementById("c");
@@ -15,7 +14,6 @@ for(i=0; i< 5;i++)
 	stars[i]=document.getElementById(ids[i]);
 	console.log(stars[i]);
 }
-console.log(stars[i-1]);
 function loading(){
 	if(x>0)
 	{
@@ -62,7 +60,7 @@ function move() {
 			setTimeout(()=>{cLetter.classList.remove("visibility")},1500);
 			setTimeout(()=>{pLetter.classList.remove("visibility")},2000);
 			setTimeout(()=>{loader.classList.add("display_none")},2500);
-			setTimeout(()=>{window.open("../utilisateur/userlogin.php",'_blank')},2700);
+			setTimeout(()=>{location.href="../utilisateur/userlogin.php"},2700);
 
 			
 
@@ -84,7 +82,6 @@ function move() {
 	}
   
 move();
-console.log(stepValue);
 
 
 

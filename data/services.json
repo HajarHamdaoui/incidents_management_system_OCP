@@ -1,0 +1,570 @@
+{
+    "services": [
+      {
+        "service": "Configuration de réseaux locaux (LAN)",
+        "catégorie": "Réseau/LAN",
+        "description": "Configuration et optimisation des réseaux locaux pour une connectivité fluide et sécurisée."
+      },
+      {
+        "service": "Conception de réseaux étendus (WAN)",
+        "catégorie": "Réseau/WAN",
+        "description": "Conception de réseaux étendus pour connecter des sites distants et assurer une communication efficace."
+      },
+      {
+        "service": "Installation de réseaux locaux sans fil (WLAN)",
+        "catégorie": "Réseau/WLAN",
+        "description": "Mise en place de réseaux sans fil pour offrir une connectivité flexible aux utilisateurs."
+      },
+      {
+        "service": "Gestion de réseaux métropolitains (MAN)",
+        "catégorie": "Réseau/MAN",
+        "description": "Gestion de réseaux métropolitains pour connecter des zones géographiques étendues."
+      },
+      {
+        "service": "Mise en place de réseaux privés virtuels (VPN)",
+        "catégorie": "Réseau/VPN",
+        "description": "Configuration de VPN pour sécuriser les communications à travers des canaux publics."
+      },
+      {
+        "service": "Mise en place de réseaux définis par logiciel (SDN)",
+        "catégorie": "Réseau/SDN",
+        "description": "Implémentation de réseaux SDN pour une gestion flexible et centralisée des ressources réseau."
+      },
+      {
+        "service": "Configuration de réseaux de diffusion de contenu (CDN)",
+        "catégorie": "Réseau/CDN",
+        "description": "Configuration de CDN pour optimiser la diffusion de contenu en ligne à grande échelle."
+      },
+      {
+        "service": "Gestion de pare-feu et sécurité réseau",
+        "catégorie": "Réseau/Pare-feu",
+        "description": "Mise en place de pare-feu et de mesures de sécurité pour protéger les réseaux contre les menaces."
+      },
+      {
+        "service": "Configuration de routeurs",
+        "catégorie": "Réseau/Routeur",
+        "description": "Configuration et optimisation de routeurs pour acheminer efficacement les données."
+      },
+      {
+        "service": "Gestion de commutateurs réseau",
+        "catégorie": "Réseau/Commutateur",
+        "description": "Gestion de commutateurs pour créer des réseaux locaux et assurer une connectivité fiable."
+      },
+      {
+        "service": "Mise en place d'équilibrage de charge",
+        "catégorie": "Réseau/Équilibrage de charge",
+        "description": "Configuration d'équilibrage de charge pour répartir la charge entre les serveurs et améliorer les performances."
+      },
+      {
+        "service": "Implémentation de solutions de sécurité réseau",
+        "catégorie": "Réseau/Sécurité réseau",
+        "description": "Mise en place de solutions de sécurité réseau pour détecter et prévenir les menaces."
+      },
+      {
+        "service": "Configuration de protocoles de routage",
+        "catégorie": "Réseau/Routage",
+        "description": "Configuration de protocoles de routage pour acheminer efficacement les paquets de données."
+      },
+      {
+        "service": "Mise en place de réseaux virtuels (VLAN)",
+        "catégorie": "Réseau/VLAN",
+        "description": "Configuration de réseaux virtuels pour segmenter et isoler les trafics sur un même réseau physique."
+      },
+      {
+        "service": "Mise en place de VoIP (voix sur IP)",
+        "catégorie": "Réseau/VoIP",
+        "description": "Implémentation de la VoIP pour permettre des appels vocaux via des réseaux IP."
+      },
+      {
+        "service": "Configuration de QoS (qualité de service)",
+        "catégorie": "Réseau/QoS",
+        "description": "Configuration de QoS pour prioriser le trafic réseau et garantir des performances optimales."
+      },
+      {
+        "service": "Surveillance de réseau en temps réel",
+        "catégorie": "Réseau/Surveillance réseau",
+        "description": "Mise en place de surveillance continue pour détecter les anomalies et assurer la disponibilité."
+      },
+      {
+        "service": "Gestion de la bande passante réseau",
+        "catégorie": "Réseau/Gestion de la bande passante",
+        "description": "Gestion de la bande passante pour optimiser l'utilisation des ressources réseau."
+      },
+      {
+        "service": "Mise en place de systèmes de gestion des systèmes",
+        "catégorie": "Systèmes/Gestion des systèmes",
+        "description": "Implémentation de systèmes de gestion pour surveiller et maintenir les systèmes informatiques."
+      },
+      {
+        "service": "Administration de systèmes d'exploitation",
+        "catégorie": "Systèmes/Systèmes d'exploitation",
+        "description": "Administration et maintenance des systèmes d'exploitation pour assurer leur bon fonctionnement."
+      },
+      {
+        "service": "Virtualisation de serveurs",
+        "catégorie": "Systèmes/Virtualisation",
+        "description": "Mise en place de virtualisation pour exécuter plusieurs systèmes sur un seul serveur physique."
+      },
+      {
+        "service": "Conteneurisation d'applications",
+        "catégorie": "Systèmes/Conteneurisation",
+        "description": "Conteneurisation d'applications pour une distribution efficace et cohérente sur différentes plateformes."
+      },
+      {
+        "service": "Mise en place de solutions Cloud",
+        "catégorie": "Systèmes/Cloud Computing",
+        "description": "Mise en place de solutions cloud pour l'hébergement et la gestion des services en ligne."
+      },
+      {
+        "service": "Stratégies de sauvegarde et restauration",
+        "catégorie": "Systèmes/Sauvegarde et restauration",
+        "description": "Définition de stratégies de sauvegarde et de restauration pour prévenir la perte de données."
+      },
+      {
+        "service": "Plan de reprise d'activité",
+        "catégorie": "Systèmes/Plan de reprise d'activité",
+        "description": "Élaboration de plans de reprise d'activité pour garantir la continuité des opérations en cas de sinistre."
+      },
+      {
+        "service": "Gestion des correctifs et mises à jour",
+        "catégorie": "Systèmes/Gestion des correctifs",
+        "description": "Gestion des mises à jour logicielles pour maintenir les systèmes sécurisés et à jour."
+      },
+      {
+        "service": "Administration système avancée",
+        "catégorie": "Systèmes/Administration système",
+        "description": "Administration avancée de systèmes pour optimiser les performances et la stabilité."
+      },
+      {
+        "service": "Gestion des utilisateurs et des accès",
+        "catégorie": "Systèmes/Gestion des utilisateurs et des accès",
+        "description": "Gestion des comptes utilisateurs et des droits d'accès pour assurer la sécurité."
+      },
+      {
+        "service": "Mise en place de solutions d'authentification",
+        "catégorie": "Systèmes/Authentification et autorisation",
+        "description": "Implémentation de solutions d'authentification pour contrôler l'accès aux ressources."
+      },
+      {
+        "service": "Gestion des identités numériques",
+        "catégorie": "Systèmes/Gestion des identités",
+        "description": "Gestion des identités numériques pour garantir l'authenticité et la sécurité des utilisateurs."
+      },
+      {
+        "service": "Surveillance continue des systèmes",
+        "catégorie": "Systèmes/Surveillance système",
+        "description": "Mise en place de surveillance pour détecter les anomalies et les performances dégradées."
+      },
+      {
+        "service": "Support technique pour utilisateurs",
+        "catégorie": "Support technique/Support utilisateur",
+        "description": "Fourniture d'assistance aux utilisateurs pour résoudre les problèmes et répondre aux questions."
+      },
+      {
+        "service": "Service desk",
+        "catégorie": "Support technique/Service desk",
+        "description": "Mise en place d'un service desk pour gérer les demandes d'assistance et les incidents."
+      },
+      {
+        "service": "Résolution d'incidents techniques",
+        "catégorie": "Support technique/Résolution d'incidents",
+        "description": "Identification et résolution d'incidents techniques pour rétablir les services rapidement."
+      },
+      {
+        "service": "Assistance à distance",
+        "catégorie": "Support technique/Support à distance",
+        "description": "Fourniture d'assistance à distance pour résoudre les problèmes des utilisateurs à distance."
+      },
+      {
+        "service": "Gestion proactive des problèmes",
+        "catégorie": "Support technique/Gestion des problèmes",
+        "description": "Gestion proactive des problèmes pour prévenir les incidents et les perturbations."
+      },
+      {
+        "service": "Support 24/7",
+        "catégorie": "Support technique/Support 24/7",
+        "description": "Fourniture de support technique en continu, 24 heures sur 24 et 7 jours sur 7."
+      },
+      {
+        "service": "Diagnostic à distance",
+        "catégorie": "Support technique/Diagnostic à distance",
+        "description": "Diagnostic à distance des problèmes techniques pour une résolution rapide."
+      },
+      {
+        "service": "Portail d'assistance en ligne",
+        "catégorie": "Support technique/Portail d'assistance en ligne",
+        "description": "Mise en place d'un portail en ligne pour fournir des ressources et un support aux utilisateurs."
+      },
+      {
+        "service": "Formation des utilisateurs",
+        "catégorie": "Support technique/Formation des utilisateurs",
+        "description": "Organisation de formations pour les utilisateurs afin de les familiariser avec les systèmes et les outils."
+      },
+      {
+        "service": "Suivi et gestion des tickets",
+        "catégorie": "Support technique/Suivi des tickets",
+        "description": "Suivi et gestion des tickets d'assistance pour garantir un suivi efficace des demandes."
+      },
+      {
+        "service": "Gestion globale de la sécurité",
+        "catégorie": "Sécurité informatique/Gestion de la sécurité",
+        "description": "Mise en place de stratégies et de solutions pour assurer la sécurité globale des systèmes et des données."
+      },
+      {
+        "service": "Analyse de vulnérabilités automatisée",
+        "catégorie": "Sécurité informatique/Analyse de vulnérabilité",
+        "description": "Utilisation d'outils d'analyse automatisée pour détecter les failles de sécurité."
+      },
+      {
+        "service": "Gestion des risques de sécurité",
+        "catégorie": "Sécurité informatique/Gestion des risques",
+        "description": "Évaluation et gestion des risques de sécurité liés aux systèmes et aux données."
+      },
+      {
+        "service": "Configuration de solutions de cryptage",
+        "catégorie": "Sécurité informatique/Cryptographie",
+        "description": "Configuration de solutions de cryptage pour protéger les données en transit."
+      },
+      {
+        "service": "Audit de sécurité des applications",
+        "catégorie": "Sécurité informatique/Sécurité des applications",
+        "description": "Audit de sécurité des applications pour identifier les vulnérabilités et les failles."
+      },
+      {
+        "service": "Simulation d'attaques pour tests d'intrusion",
+        "catégorie": "Sécurité informatique/Tests d'intrusion",
+        "description": "Simulation d'attaques pour évaluer la résistance aux menaces et aux attaques."
+      },
+      {
+        "service": "Mise en place de solutions SIEM",
+        "catégorie": "Sécurité informatique/Surveillance de la sécurité",
+        "description": "Mise en place de solutions de surveillance de la sécurité (SIEM) pour détecter les activités suspectes."
+      },
+      {
+        "service": "Programmes de sensibilisation à la sécurité",
+        "catégorie": "Sécurité informatique/Sensibilisation à la sécurité",
+        "description": "Conception et diffusion de programmes de sensibilisation à la sécurité pour les employés."
+      },
+      {
+        "service": "Gestion des incidents de sécurité",
+        "catégorie": "Sécurité informatique/Gestion des incidents de sécurité",
+        "description": "Mise en place de procédures de réponse aux incidents de sécurité pour réagir efficacement aux menaces."
+      },
+      {
+        "service": "Mise en conformité réglementaire",
+        "catégorie": "Sécurité informatique/Conformité réglementaire",
+        "description": "Surveillance et mise en œuvre des réglementations de sécurité et de confidentialité."
+      },
+      {
+        "service": "Développement d'applications sur mesure",
+        "catégorie": "Développement/Développement d'applications",
+        "description": "Conception et développement d'applications personnalisées répondant aux besoins spécifiques des clients."
+      },
+      {
+        "service": "Conception et développement de sites web",
+        "catégorie": "Développement/Développement web",
+        "description": "Conception, développement et déploiement de sites web interactifs et responsifs."
+      },
+      {
+        "service": "Développement d'applications mobiles",
+        "catégorie": "Développement/Développement mobile",
+        "description": "Conception et développement d'applications mobiles pour diverses plateformes."
+      },
+      {
+        "service": "Intégration de DevOps",
+        "catégorie": "Développement/DevOps",
+        "description": "Intégration de pratiques DevOps pour améliorer la collaboration entre développement et opérations."
+      },
+      {
+        "service": "Mise en place d'intégration continue",
+        "catégorie": "Développement/Intégration continue",
+        "description": "Configuration de pipelines d'intégration continue pour automatiser les tests et les déploiements."
+      },
+      {
+        "service": "Déploiement d'applications",
+        "catégorie": "Développement/Déploiement",
+        "description": "Déploiement d'applications sur des environnements de production pour rendre les services accessibles."
+      },
+      {
+        "service": "Automatisation des tests logiciels",
+        "catégorie": "Développement/Automatisation des tests",
+        "description": "Automatisation des tests pour garantir la qualité et la fiabilité des applications."
+      },
+      {
+        "service": "Gestion de versions de code source",
+        "catégorie": "Développement/Gestion de versions",
+        "description": "Gestion de versions pour suivre les modifications du code source et faciliter la collaboration."
+      },
+      {
+        "service": "Méthodologies agiles de développement",
+        "catégorie": "Développement/Méthodes agiles",
+        "description": "Adoption de méthodologies agiles pour favoriser une approche itérative et collaborative du développement."
+      },
+      {
+        "service": "Analyse et conception de logiciels",
+        "catégorie": "Développement/Analyse et conception de logiciels",
+        "description": "Analyse des besoins, conception d'architectures et spécification de logiciels."
+      },
+      {
+        "service": "Gestion de serveurs physiques",
+        "catégorie": "Infrastructure/Gestion des serveurs",
+        "description": "Gestion et maintenance de serveurs physiques pour assurer leur disponibilité et leurs performances."
+      },
+      {
+        "service": "Gestion du cloud computing",
+        "catégorie": "Infrastructure/Gestion du cloud",
+        "description": "Gestion et optimisation des ressources cloud pour répondre aux besoins informatiques."
+      },
+      {
+        "service": "Optimisation du stockage",
+        "catégorie": "Infrastructure/Stockage",
+        "description": "Optimisation du stockage pour garantir la disponibilité et les performances des données."
+      },
+      {
+        "service": "Virtualisation des serveurs",
+        "catégorie": "Infrastructure/Virtualisation des serveurs",
+        "description": "Virtualisation des serveurs pour maximiser l'utilisation des ressources matérielles."
+      },
+      {
+        "service": "Architecture de réseau",
+        "catégorie": "Infrastructure/Architecture de réseau",
+        "description": "Conception et mise en place d'architectures réseau pour assurer une connectivité efficace."
+      },
+      {
+        "service": "Gestion de la capacité",
+        "catégorie": "Infrastructure/Gestion de la capacité",
+        "description": "Surveillance et gestion de la capacité des ressources informatiques pour éviter les goulots d'étranglement."
+      },
+      {
+        "service": "Surveillance de l'infrastructure",
+        "catégorie": "Infrastructure/Surveillance de l'infrastructure",
+        "description": "Surveillance continue de l'infrastructure pour détecter les problèmes et les anomalies."
+      },
+      {
+        "service": "Orchestration de conteneurs",
+        "catégorie": "Infrastructure/Orchestration",
+        "description": "Orchestration de conteneurs pour automatiser le déploiement et la gestion à grande échelle."
+      },
+      {
+        "service": "Gestion des conteneurs",
+        "catégorie": "Infrastructure/Gestion des conteneurs",
+        "description": "Gestion des conteneurs pour assurer une utilisation efficace et cohérente des applications."
+      },
+      {
+        "service": "Automatisation des opérations",
+        "catégorie": "Infrastructure/Automatisation des opérations",
+        "description": "Automatisation des opérations informatiques pour améliorer l'efficacité et réduire les erreurs."
+      },
+      {
+        "service": "Gestion de bases de données",
+        "catégorie": "Base de données/Gestion de bases de données",
+        "description": "Gestion et maintenance de bases de données pour assurer l'intégrité et la disponibilité des données."
+      },
+      {
+        "service": "Conception de bases de données",
+        "catégorie": "Base de données/Conception de bases de données",
+        "description": "Conception de structures de bases de données pour répondre aux besoins fonctionnels."
+      },
+      {
+        "service": "Administration de bases de données",
+        "catégorie": "Base de données/Administration de bases de données",
+        "description": "Administration et gestion de bases de données pour optimiser les performances et la sécurité."
+      },
+      {
+        "service": "Optimisation des requêtes",
+        "catégorie": "Base de données/Optimisation des requêtes",
+        "description": "Optimisation des requêtes SQL pour améliorer les performances des bases de données."
+      },
+      {
+        "service": "Sauvegarde et restauration de bases de données",
+        "catégorie": "Base de données/Sauvegarde et restauration",
+        "description": "Stratégies de sauvegarde et procédures de restauration pour protéger les données."
+      },
+      {
+        "service": "Réplication de bases de données",
+        "catégorie": "Base de données/Réplication de bases de données",
+        "description": "Mise en place de réplication de bases de données pour la redondance et la disponibilité."
+      },
+      {
+        "service": "Sécurité des bases de données",
+        "catégorie": "Base de données/Sécurité des bases de données",
+        "description": "Implémentation de mesures de sécurité pour protéger l'intégrité et la confidentialité des données."
+      },
+      {
+        "service": "Analyse de données massives",
+        "catégorie": "Base de données/Big Data",
+        "description": "Analyse de volumes massifs de données pour extraire des informations et des tendances significatives."
+      },
+      {
+        "service": "Analyse de données",
+        "catégorie": "Base de données/Analyse de données",
+        "description": "Analyse de données pour identifier des tendances, des corrélations et des modèles."
+      },
+      {
+        "service": "Business Intelligence",
+        "catégorie": "Base de données/Business Intelligence",
+        "description": "Mise en place de solutions de BI pour la visualisation et l'analyse de données stratégiques."
+      },
+      {
+        "service": "Mise en place de solutions VoIP",
+        "catégorie": "Télécommunications/VoIP",
+        "description": "Implémentation de solutions VoIP pour des communications vocales efficaces via IP."
+      },
+      {
+        "service": "Téléphonie IP",
+        "catégorie": "Télécommunications/Téléphonie IP",
+        "description": "Mise en place de systèmes de téléphonie via IP pour des communications flexibles."
+      },
+      {
+        "service": "Téléphonie mobile",
+        "catégorie": "Télécommunications/Téléphonie mobile",
+        "description": "Configuration de solutions de téléphonie mobile pour une communication en déplacement."
+      },
+      {
+        "service": "Vidéoconférence",
+        "catégorie": "Télécommunications/Vidéoconférence",
+        "description": "Mise en place de solutions de vidéoconférence pour des réunions à distance interactives."
+      },
+      {
+        "service": "Messagerie électronique",
+        "catégorie": "Télécommunications/Messagerie électronique",
+        "description": "Configuration et gestion de systèmes de messagerie électronique pour les communications professionnelles."
+      },
+      {
+        "service": "Collaboration en ligne",
+        "catégorie": "Télécommunications/Collaboration en ligne",
+        "description": "Mise en place de plates-formes de collaboration en ligne pour le partage d'informations et de documents."
+      },
+      {
+        "service": "Gestion de la bande passante",
+        "catégorie": "Télécommunications/Gestion de la bande passante",
+        "description": "Gestion de la bande passante pour optimiser l'utilisation des ressources réseau dans les communications."
+      },
+      {
+        "service": "Communications unifiées",
+        "catégorie": "Télécommunications/Communications unifiées",
+        "description": "Mise en place de solutions de communications unifiées pour intégrer divers canaux de communication."
+      },
+      {
+        "service": "Implémentation de l'Internet des Objets (IoT)",
+        "catégorie": "Télécommunications/IoT",
+        "description": "Mise en place d'infrastructures pour l'Internet des Objets pour la collecte et l'analyse de données."
+      },
+      {
+        "service": "Gestion du matériel informatique",
+        "catégorie": "Matériel/Gestion du matériel informatique",
+        "description": "Gestion et maintenance du matériel informatique pour assurer son bon fonctionnement."
+      },
+      {
+        "service": "Maintenance du matériel",
+        "catégorie": "Matériel/Maintenance du matériel",
+        "description": "Maintenance préventive et corrective du matériel informatique pour prolonger sa durée de vie."
+      },
+      {
+        "service": "Gestion des actifs informatiques",
+        "catégorie": "Matériel/Gestion des actifs informatiques",
+        "description": "Gestion des actifs matériels pour suivre et gérer l'inventaire des équipements."
+      },
+      {
+        "service": "Diagnostic et réparation",
+        "catégorie": "Matériel/Diagnostic et réparation",
+        "description": "Diagnostic des problèmes matériels et réparation pour restaurer les performances."
+      },
+      {
+        "service": "Mise à niveau des composants matériels",
+        "catégorie": "Matériel/Mise à niveau des composants",
+        "description": "Mise à niveau des composants matériels pour améliorer les performances et la compatibilité."
+      },
+      {
+        "service": "Gestion de l'inventaire matériel",
+        "catégorie": "Matériel/Gestion de l'inventaire",
+        "description": "Suivi et gestion de l'inventaire du matériel informatique pour une planification efficace."
+      },
+      {
+        "service": "Virtualisation du matériel",
+        "catégorie": "Matériel/Virtualisation du matériel",
+        "description": "Virtualisation du matériel pour créer des environnements informatiques virtuels."
+      },
+      {
+        "service": "Sécurité physique du matériel",
+        "catégorie": "Matériel/Sécurité physique",
+        "description": "Mise en place de mesures de sécurité physique pour protéger les équipements informatiques."
+      },
+      {
+        "service": "Élimination des équipements obsolètes",
+        "catégorie": "Matériel/Élimination des équipements obsolètes",
+        "description": "Élimination sécurisée et écologique des équipements informatiques obsolètes."
+      },
+      {
+        "service": "Installation et configuration matérielle",
+        "catégorie": "Matériel/Installation et configuration matérielle",
+        "description": "Installation et configuration de matériel informatique pour une utilisation optimale."
+      },
+      {
+        "service": "Gestion des licences logicielles",
+        "catégorie": "Logiciels/Gestion des licences",
+        "description": "Gestion des licences logicielles pour assurer la conformité et l'efficacité des logiciels."
+      },
+      {
+        "service": "Installation et configuration de logiciels",
+        "catégorie": "Logiciels/Installation et configuration",
+        "description": "Installation et configuration de logiciels pour répondre aux besoins des utilisateurs."
+      },
+      {
+        "service": "Mise à jour et patching logiciel",
+        "catégorie": "Logiciels/Mise à jour et patching",
+        "description": "Mise à jour régulière et application de correctifs pour maintenir les logiciels à jour et sécurisés."
+      },
+      {
+        "service": "Migration de logiciels",
+        "catégorie": "Logiciels/Migration de logiciels",
+        "description": "Migration de logiciels vers de nouvelles versions ou des environnements différents."
+      },
+      {
+        "service": "Intégration de systèmes",
+        "catégorie": "Logiciels/Intégration de systèmes",
+        "description": "Intégration de systèmes et de logiciels pour assurer la compatibilité et la fluidité des processus."
+      },
+      {
+        "service": "Développement de scripts et automatisation",
+        "catégorie": "Logiciels/Développement de scripts",
+        "description": "Développement de scripts personnalisés pour automatiser des tâches et des processus."
+      },
+      {
+        "service": "Consultation en stratégie numérique",
+        "catégorie": "Conseil/Stratégie numérique",
+        "description": "Fourniture de conseils pour élaborer des stratégies numériques alignées sur les objectifs commerciaux."
+      },
+      {
+        "service": "Conseils en transformation digitale",
+        "catégorie": "Conseil/Transformation digitale",
+        "description": "Conseils pour conduire et réussir la transformation numérique au sein des organisations."
+      },
+      {
+        "service": "Audit informatique",
+        "catégorie": "Conseil/Audit informatique",
+        "description": "Évaluation des systèmes informatiques et des processus pour identifier les améliorations potentielles."
+      },
+      {
+        "service": "Conseils en cybersécurité",
+        "catégorie": "Conseil/Cybersécurité",
+        "description": "Conseils en matière de sécurité informatique pour identifier les vulnérabilités et proposer des solutions."
+      },
+      {
+        "service": "Consultation en technologie Cloud",
+        "catégorie": "Conseil/Technologie Cloud",
+        "description": "Conseils sur l'adoption de solutions cloud adaptées aux besoins de l'entreprise."
+      },
+      {
+        "service": "Conseils en gestion des données",
+        "catégorie": "Conseil/Gestion des données",
+        "description": "Conseils pour gérer et exploiter efficacement les données dans l'entreprise."
+      },
+      {
+        "service": "Conseils en architecture IT",
+        "catégorie": "Conseil/Architecture IT",
+        "description": "Conseils pour concevoir des architectures IT robustes et évolutives."
+      }
+    ]
+  }
+  

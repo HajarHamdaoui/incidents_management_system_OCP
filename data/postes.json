@@ -1,115 +1,492 @@
 {
-    "postes": [
-      "Ingénieur en Génie des Procédés",
-      "Ingénieur en Génie Civil",
-      "Ingénieur en Génie Électrique",
-      "Ingénieur en Géotechnique",
-      "Ingénieur en Mécanique Industrielle",
-      "Ingénieur en Planification Minière",
-      "Technicien en Géologie",
-      "Technicien en Électronique Industrielle",
-      "Architecte de Solutions IT",
-      "Développeur Front-End",
-      "Développeur Back-End",
-      "Analyste de Données",
-      "Expert en Cybersécurité",
-      "Administrateur de Base de Données",
-      "Ingénieur Cloud",
-      "Analyste en Business Intelligence",
-      "Responsable de la Production",
-      "Planificateur de la Chaîne d'Approvisionnement",
-      "Analyste Logistique",
-      "Superviseur d'Expédition",
-      "Coordinateur de la Logistique Internationale",
-      "Spécialiste en Optimisation des Stocks",
-      "Responsable des Ressources Humaines",
-      "Business Partner RH",
-      "Gestionnaire de la Mobilité Internationale",
-      "Analyste en Données RH",
-      "Spécialiste en Formation et Développement",
-      "Conseiller en Relations Employés",
-      "Directeur Financier",
-      "Contrôleur de Gestion",
-      "Analyste en Trésorerie",
-      "Comptable Senior",
-      "Auditeur Interne",
-      "Spécialiste en Fiscalité",
-      "Analyste en Coûts",
-      "Directeur de la Communication",
-      "Responsable de la Stratégie Marketing",
-      "Chargé des Médias Sociaux",
-      "Concepteur Graphique",
-      "Responsable Événementiel",
-      "Expert en Branding",
-      "Analyste en Marketing de Contenu",
-      "Scientifique en Matériaux Avancés",
-      "Ingénieur de Recherche en Énergie Renouvelable",
-      "Spécialiste en Biotechnologie Agricole",
-      "Chercheur en Géochimie",
-      "Expert en Innovation Technologique",
-      "Concepteur de Nouveaux Produits",
-      "Directeur Juridique",
-      "Avocat en Droit de l'Environnement",
-      "Spécialiste en Droit des Mines",
-      "Juriste d'Affaires Internationales",
-      "Conseiller en Litiges",
-      "Expert en Contrats et Négociations",
-      "Responsable Assurance Qualité",
-      "Spécialiste en Sécurité Alimentaire",
-      "Auditeur ISO",
-      "Expert en Conformité Environnementale",
-      "Analyste en Évaluation des Risques Industriels",
-      "Coordinateur de la Santé et de la Sécurité au Travail",
-      "Directeur de Programme",
-      "Chef de Projet Agile",
-      "Spécialiste en Gestion de Portefeuille de Projets",
-      "Coordinateur de Projets Internationaux",
-      "Planificateur de Projet Industriel",
-      "Expert en Gestion du Changement",
-      "Médecin du Travail",
-      "Hygiéniste Industriel",
-      "Ergonome",
-      "Spécialiste en Prévention des Risques Professionnels",
-      "Ingénieur en Maintenance Industrielle",
-      "Technicien en Électromécanique",
-      "Spécialiste en Maintenance Prédictive",
-      "Gestionnaire de Maintenance des Équipements",
-      "Expert en Écologie Industrielle",
-      "Spécialiste en Gestion des Déchets",
-      "Analyste en Impact Environnemental",
-      "Responsable Développement Durable",
-      "Directeur des Achats",
-      "Acheteur Stratégique",
-      "Responsable de la Relation Fournisseurs",
-      "Analyste en Gestion des Achats",
-      "Spécialiste en Sourcing International",
-      "Directeur Commercial",
-      "Responsable des Exportations",
-      "Analyste en Commerce International",
-      "Gestionnaire de Relations Clients Internationaux",
-      "Ingénieur en Exploitation Minière",
-      "Chef de Carrière",
-      "Géomètre Minier",
-      "Planificateur de Production Minière",
-      "Technicien en Maintenance Électrique",
-      "Électricien Industriel",
-      "Ingénieur en Électrotechnique",
-      "Technicien de Laboratoire",
-      "Chimiste Analytique",
-      "Inspecteur en Contrôle Qualité",
-      "Auditeur de Processus",
-      "Gestionnaire de Terminal Portuaire",
-      "Médecin Généraliste",
-      "Médecin du Travail",
-      "Médecin Spécialiste en Médecine du Sommeil",
-      "Médecin Spécialiste en Radiologie",
-      "Médecin Spécialiste en Cardiologie",
-      "Médecin Spécialiste en Dermatologie",
-      "Médecin Spécialiste en Gynécologie",
-      "Médecin Spécialiste en Ophtalmologie",
-      "Médecin Spécialiste en Neurologie",
-      "Médecin Spécialiste en Chirurgie Orthopédique",
-      "Superviseur des Opérations Portuaires"
-    ]
-  }
-  
+  "postes": [
+    {
+      "poste": "Directeur Général",
+      "importance": 5
+    },
+    {
+      "poste": "Directeur des Opérations",
+      "importance": 5
+    },
+    {
+      "poste": "Directeur des Ressources Humaines",
+      "importance": 5
+    },
+    {
+      "poste": "Directeur Financier",
+      "importance": 5
+    },
+    {
+      "poste": "Directeur de la Stratégie",
+      "importance": 5
+    },
+    {
+      "poste": "Directeur des Technologies de l'Information",
+      "importance": 5
+    },
+    {
+      "poste": "Directeur des Achats",
+      "importance": 5
+    },
+    {
+      "poste": "Directeur des Relations Publiques",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable de la Communication Interne",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable de la Sécurité Industrielle",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable de la Chaîne d'Approvisionnement",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable de la Planification Minière",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable des Relations avec les Investisseurs",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable de la Conformité et des Normes",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable de la Durabilité",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable de l'Innovation",
+      "importance": 4
+    },
+    {
+      "poste": "Responsable des Opérations Portuaires",
+      "importance": 3
+    },
+    {
+      "poste": "Chef de Projet Stratégique",
+      "importance": 3
+    },
+    {
+      "poste": "Analyste en Business Intelligence",
+      "importance": 3
+    },
+    {
+      "poste": "Gestionnaire de la Mobilité Internationale",
+      "importance": 3
+    },
+    {
+      "poste": "Avocat en Droit des Ressources Naturelles",
+      "importance": 3
+    },
+    {
+      "poste": "Analyste en Évaluation des Risques Industriels",
+      "importance": 3
+    },
+    {
+      "poste": "Spécialiste en Gestion des Projets Miniers",
+      "importance": 3
+    },
+    {
+      "poste": "Responsable de la Sécurité des Données",
+      "importance": 3
+    },
+    {
+      "poste": "Expert en Gestion de la Chaîne d'Approvisionnement",
+      "importance": 3
+    },
+    {
+      "poste": "Responsable de la Santé et de la Sécurité au Travail",
+      "importance": 3
+    },
+    {
+      "poste": "Conseiller en Affaires Réglementaires",
+      "importance": 3
+    },
+    {
+      "poste": "Analyste en Développement Durable",
+      "importance": 2
+    },
+    {
+      "poste": "Chargé de la Communication Externe",
+      "importance": 2
+    },
+    {
+      "poste": "Spécialiste en Gestion des Risques",
+      "importance": 2
+    },
+    {
+      "poste": "Gestionnaire de la Performance",
+      "importance": 2
+    },
+    {
+      "poste": "Expert en Relations Communautaires",
+      "importance": 2
+    },
+    {
+      "poste": "Analyste Financier",
+      "importance": 2
+    },
+    {
+      "poste": "Responsable de la Formation",
+      "importance": 2
+    },
+    {
+      "poste": "Architecte de Solutions IT",
+      "importance": 2
+    },
+    {
+      "poste": "Ingénieur en Procédés Industriels",
+      "importance": 2
+    },
+    {
+      "poste": "Chargé de la Gestion de la Marque",
+      "importance": 2
+    },
+    {
+      "poste": "Responsable des Opérations Minières",
+      "importance": 2
+    },
+    {
+      "poste": "Technicien Mécanicien",
+      "importance": 2
+    },
+    {
+      "poste": "Médecin du Travail",
+      "importance": 4
+    },
+    {
+      "poste": "Médecin Spécialiste en Radiologie",
+      "importance": 2
+    },
+    {
+      "poste": "Médecin Spécialiste en Cardiologie",
+      "importance": 2
+    },
+    {
+      "poste": "Médecin Spécialiste en Dermatologie",
+      "importance": 2
+    },
+    {
+      "poste": "Médecin Spécialiste en Gynécologie",
+      "importance": 2
+    },
+    {
+      "poste": "Médecin Spécialiste en Ophtalmologie",
+      "importance": 2
+    },
+    {
+      "poste": "Médecin Spécialiste en Neurologie",
+      "importance": 2
+    },
+    {
+      "poste": "Ingénieur Réseau",
+      "importance": 3
+    },
+    {
+      "poste": "Développeur Front-End",
+      "importance": 3
+    },
+    {
+      "poste": "Développeur Back-End",
+      "importance": 3
+    },
+    {
+      "poste": "Ingénieur en Génie Industriel",
+      "importance": 3
+    },
+    {
+      "poste": "Responsable de la Logistique",
+      "importance": 3
+    },
+    {
+      "poste": "Analyste en Cybersécurité",
+      "importance": 3
+    },
+    {
+      "poste": "Architecte de Réseau",
+      "importance": 3
+    },
+    {
+      "poste": "Spécialiste en Automatisation Industrielle",
+      "importance": 3
+    },
+    {
+      "poste": "Chef de Projet IT",
+      "importance": 3
+    },
+    {
+      "poste": "Ingénieur en Génie Logiciel",
+      "importance": 3
+    },
+    {
+      "poste": "Ingénieur en Télécommunications",
+      "importance": 3
+    },
+    {
+      "poste": "Analyste de Données",
+      "importance": 3
+    },
+    {
+      "poste": "Technicien en Maintenance Industrielle",
+      "importance": 3
+    },
+    {
+      "poste": "Technicien Réseau",
+      "importance": 3
+    },
+    {
+      "poste": "Ingénieur en Génie des Procédés",
+      "importance": 3
+    },
+    {
+      "poste": "Technicien de Maintenance Industrielle",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Électromécanique",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Électronique",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Automatisation",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Instrumentation",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Télécommunications",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Réseaux",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Informatique Industrielle",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Génie Civil",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Génie Électrique",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Mécanique",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien de Laboratoire",
+      "importance": 1
+    },
+    {
+      "poste": "Ouvrier d'Usine",
+      "importance": 1
+    },
+    {
+      "poste": "Ouvrier en Production",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Machine",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Chariot Élévateur",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Production",
+      "importance": 1
+    },
+    {
+      "poste": "Agent de Maintenance",
+      "importance": 1
+    },
+    {
+      "poste": "Agent de Nettoyage Industriel",
+      "importance": 1
+    },
+    {
+      "poste": "Préparateur de Commandes",
+      "importance": 1
+    },
+    {
+      "poste": "Manutentionnaire",
+      "importance": 1
+    },
+    {
+      "poste": "Soudeur",
+      "importance": 1
+    },
+    {
+      "poste": "Monteur-Assembleur",
+      "importance": 1
+    },
+    {
+      "poste": "Menuisier",
+      "importance": 1
+    },
+    {
+      "poste": "Électricien",
+      "importance": 1
+    },
+    {
+      "poste": "Plombier",
+      "importance": 1
+    },
+    {
+      "poste": "Mécanicien Automobile",
+      "importance": 1
+    },
+    {
+      "poste": "Mécanicien Industriel",
+      "importance": 1
+    },
+    {
+      "poste": "Peintre en Bâtiment",
+      "importance": 1
+    },
+    {
+      "poste": "Maçon",
+      "importance": 1
+    },
+    {
+      "poste": "Charpentier",
+      "importance": 1
+    },
+    {
+      "poste": "Couvreur",
+      "importance": 1
+    },
+    {
+      "poste": "Carreleur",
+      "importance": 1
+    },
+    {
+      "poste": "Électricien de Maintenance",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Production Alimentaire",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Ligne de Production",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien en Mécanique Automobile",
+      "importance": 1
+    },
+    {
+      "poste": "Agent de Sécurité",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Fabrication",
+      "importance": 1
+    },
+    {
+      "poste": "Manœuvre",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur d'Assemblage",
+      "importance": 1
+    },
+    {
+      "poste": "Manutentionnaire de Chantier",
+      "importance": 1
+    },
+    {
+      "poste": "Préparateur de Matériaux",
+      "importance": 1
+    },
+    {
+      "poste": "Mécanicien de Machines Industrielles",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Machine CNC",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Ligne de Production Alimentaire",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien de Maintenance Électrique",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Machine d'Emballage",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien de Maintenance Mécanique",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Ligne d'Assemblage",
+      "importance": 1
+    },
+    {
+      "poste": "Manutentionnaire de Stock",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien de Maintenance en Électronique",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Machine de Production",
+      "importance": 1
+    },
+    {
+      "poste": "Soudeur Industriel",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien de Maintenance Industrielle en Électromécanique",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Machine de Fabrication",
+      "importance": 1
+    },
+    {
+      "poste": "Agent de Maintenance en Mécanique Industrielle",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Ligne de Production Industrielle",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien de Maintenance en Automatisation",
+      "importance": 1
+    },
+    {
+      "poste": "Opérateur de Machine de Traitement",
+      "importance": 1
+    },
+    {
+      "poste": "Technicien de Maintenance en Instrumentation",
+      "importance": 1
+    }
+  ]
+}

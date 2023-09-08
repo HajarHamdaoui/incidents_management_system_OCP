@@ -62,7 +62,7 @@ session_start();
               <div class="info">
                 <div class="sub">Réclamation d'incidents</div>
                 <div class="title">Écoute, Rétablissons, Agissons : Votre Voix Compte !</div>
-                <button class="btn">Réclamer</button>
+                <button class="btn" id="reclamer">Réclamer</button>
               </div>
               <div class="image">
                 <i class="fa-solid fa-bolt"></i>
@@ -80,21 +80,13 @@ session_start();
               <div class="image">
                 <i class="fa-regular fa-newspaper"></i>              </div>
             </div>
-            <div class="card">
-              <div class="info">
-                <div class="sub">Applications Métiers</div>
-                <div class="title">Réinventons l'Excellence Métier : Vos Besoins, Notre Plateforme.</div>
-                <button class="btn">Demander</button>
-              </div>
-              <div class="image">
-                <i class="fa-solid fa-computer"></i>            </div>
-          </div>
+            
           <div class="row">
             <div class="card">
               <div class="info">
                 <div class="sub">Historique</div>
                 <div class="title">Tracer notre Chemin : Passé, Présent et Solutions à Venir.</div>
-                <button class="btn">Consulter</button>
+                <button class="btn" id="historique">Consulter</button>
               </div>
               <div class="image">
                 <i class="fa-solid fa-clock-rotate-left"></i>
@@ -104,5 +96,6 @@ session_start();
         </div>
       </div>
       <script src="../js/interface_util.js"></script>
+    
 </body>
 </html>

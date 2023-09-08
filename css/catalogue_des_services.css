@@ -1,6 +1,5 @@
 body {
     font-family: 'lato', sans-serif;
-    background-color: #e2e5e4;
     
 }
 .catalogue-container {
@@ -43,21 +42,20 @@ a{
     padding:0px 10px;
 
 }
+.responsive-table .col-1 i{
+    color: #138b08;
+    font-size: 2rem;
+    display:block;
 
+}
 .responsive-table .col-2 {
-    flex-basis: 60%;
+    flex-basis: 80%;
 }
 .responsive-table .col-3 {
-    flex-basis: 10%;
+    flex-basis: 15%;
     display:flex;
     justify-content: center;
     align-items:center;
-}
-.responsive-table .col-4 {
-    flex-basis: 15%;
-}
-.responsive-table .col-5 {
-    flex-basis: 10%;
 }
 .titre-de-demande{
     color: rgb(8, 140, 173);
@@ -70,7 +68,7 @@ a{
     font-style:italic;
 }
 
-.ms-button {
+.demander-button {
  font-weight: bold;
  white-space: nowrap ;
   background-color: initial;
@@ -85,7 +83,7 @@ a{
   line-height: 44px;
   outline: 0;
   overflow: hidden;
-  padding: 0 5px;
+  padding: 0 20px;
   pointer-events: auto;
   position: relative;
   text-align: center;
@@ -94,12 +92,12 @@ a{
   -webkit-user-select: none;
   vertical-align: top;
   white-space: nowrap;
-  width: 75%;
+  width: 100%;
   z-index: 9;
   border: 0;
 }
 
-.ms-button:hover {
+.demander-button:hover {
   background: #00bd68;
 }
 
