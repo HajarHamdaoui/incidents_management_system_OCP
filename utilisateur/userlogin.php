@@ -141,7 +141,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_last_name'] =  $result_row["last_name"];
         $_SESSION['user_email'] =  $result_row["user_email"];
         $_SESSION['user_phone'] =  $result_row["last_name"];
-        $_SESSION['user_profil'] =  $result_row["user_profil"];
         $_SESSION['gender'] =  $result_row["gender"];
         $_SESSION['user_image'] =  $result_row["user_image"];
 		$_SESSION['affectation_groups'] =  $result_row["affectation_groups"];
@@ -152,7 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if($result_row['is_RH'] == true){
 			echo "
 		<script>
-			window.open('../RH/interface_RH.php','_self');
+			location.href ='../RH/interface_RH.php';
 		</script>
 		";}
 		else{

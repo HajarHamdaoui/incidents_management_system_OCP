@@ -7,6 +7,9 @@ font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
 
 }
+input{
+  padding-left:10px;
+}
 .speech-bubble {
 	background: #8ae485;
   display:flex;

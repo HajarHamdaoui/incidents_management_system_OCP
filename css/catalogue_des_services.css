@@ -72,7 +72,7 @@ a{
  font-weight: bold;
  white-space: nowrap ;
   background-color: initial;
-  background-image: linear-gradient(-180deg, #138b08, #00BD68);
+  background-image: linear-gradient(-180deg, #138b08, #00bd6861);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   color: #FFFFFF;

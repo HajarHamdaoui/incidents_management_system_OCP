@@ -1,6 +1,11 @@
 <?php
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+  
+  require 'vendor/autoload.php';
 session_start();
 include("../includes/connect.php");
+include("../includes/randomPassword.php")
 
 ?>
 
@@ -16,6 +21,11 @@ include("../includes/connect.php");
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/searchable-dropdown.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+      input{
+        
+      }
+    </style>
     <link rel="stylesheet" href="../css/datepicker.css">
 
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
@@ -84,23 +94,23 @@ include("../includes/connect.php");
                
             <div class="field-container">
               <label for="titre">Nom</label>
-              <input type="text" name="nom" id="titre">
+              <input type="text" name="nom" id="titre" style="padding-left:10px;">
             </div>   
             <div class="field-container">
-                <label for="titre">Prenom</label>
-                <input type="text" name="prenom" id="titre">
+                <label for="titre">Prénom</label>
+                <input type="text" name="prenom" style="padding-left:10px;" id="titre">
             </div>   
             <div class="field-container">
                 <label for="CIN">CIN</label>
-                <input type="text" name="cin" id="titre">
+                <input type="text" name="cin" style="padding-left:10px;" id="titre">
             </div> 
             <div class="field-container">
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="titre">
+                <input type="email" name="email" style="padding-left:10px;" id="titre">
             </div>
             <div class="field-container">
                 <label for="numéro_de_téléphone">Numéro de téléphone</label>
-                <input type="text" name="numéro_de_téléphone" id="titre">
+                <input type="text" name="numéro_de_téléphone" style="padding-left:10px;" id="titre">
             </div> 
             <div class="field-container">
                 <label for="">Adresse postale</label>
@@ -172,33 +182,14 @@ include("../includes/connect.php");
        
       </fieldset>
 
-      <!-- <fieldset>
-        <legend><i class="fa-solid fa-chevron-down"></i>Catégorisation et Affectation :</legend>
-       
-          <div class="field-container">
-            <label for="Groupe d'affectation">Groupe d'affectation</label>
-            <div name="Groupe d'affectation" class="searchable-dropdown" id="searchable-dropdown">
-              <div class="searchable-dropdown-group">
-                 <span class="searchable-dropdown-arrow"></span>
-                 <select name="emplacement" id="emplacement" class="dropdown">
-                    <option disabled>Selection de Groupe d'affectation</option>
-                    <option value="Casablanca">M</option>
-                    <option value="Khouribga">M</option>
-                    <option value="Boucraa">M</option>
-                 </select>
-              </div>
-            </div>     
-          </div>
-          
-      </fieldset> -->
 
       <fieldset>
         <legend><i class="fa-solid fa-chevron-down"></i>Ajouter plus d'Informations sur l'employé :</legend>
-          <textarea name="additional_comments" id="additional-comments" cols="30" rows="10"></textarea>
+          <textarea name="additional_comments" id="additional-comments" cols="30" rows="10" style="padding-left:10px;"></textarea>
       </fieldset>
 
 
-      <input type="submit" id="submit" value="Soumission">
+      <input type="submit" id="submit" class ="submit" value="Soumission">
 
     </form>
   </div>
@@ -216,7 +207,6 @@ include("../includes/connect.php");
 
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-  echo "2 !";
   $user_last_name = $_POST["nom"];
   $user_first_name = $_POST["prenom"];
   $user_cin = $_POST["cin"];
@@ -229,19 +219,87 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   $user_emplacement = $_POST["emplacement"];
   $user_post = $_POST["poste"];
   $user_description = $_POST["additional_comments"];
-   echo $user_birth_date;
+  $user_password=generateRandomPassword(12);
+  $user_password_coded= password_hash($user_password,PASSWORD_DEFAULT);
 
- $insert_query="INSERT INTO user (first_name,last_name,user_email,user_phone,gender,CIN,birth_date,postal_adresse,drivers_license,poste,emplacement,user_description) VALUES ('".$user_first_name."','".$user_last_name."','".$user_email."','".$user_phone."','".$user_sexe."','".$user_cin."','".$user_birth_date."','".$user_adress."','".$user_drivers_license."','".$user_post."','".$user_emplacement."','".$user_description."');";
+
+
+
+ $insert_query="INSERT INTO user (first_name,last_name,user_email,user_phone,gender,CIN,birth_date,postal_adresse,drivers_license,poste,emplacement,user_description,user_password) VALUES ('".$user_first_name."','".$user_last_name."','".$user_email."','".$user_phone."','".$user_sexe."','".$user_cin."','".$user_birth_date."','".$user_adress."','".$user_drivers_license."','".$user_post."','".$user_emplacement."','".$user_description."','".$user_password_coded."');";
   $result_insert = mysqli_query($conn,$insert_query);
+  
   
  
 
 if ($result_insert) {
-  echo "<script>location.href='../RH/interface_RH.php';</script>";
+
+  $mail = new PHPMailer(true);
+
+
+try {
+
+    // Server settings
+
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP server
+    $mail->SMTPAuth = true;
+    $mail->Username = 'resolvesphere@gmail.com'; // Replace with your SMTP username
+    $mail->Password = 'emtf syty ollp huyh'; // Replace with your SMTP password
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+
+    // Recipient
+    $mail->setFrom('resolvesphere@gmail.com', 'Resolve Sphere');
+    $user_name = $user_last_name." ".$user_first_name;
+
+    $mail->addAddress($user_email, $user_name);
+
+    // Email content
+    $mail->isHTML(true); // Set the email format to HTML
+    $mail->Subject = 'Mot de Passe par défaut';
+
+    // HTML content for the email
+    if($user_sexe=='Female')
+    {
+      $cher_mot= 'Chère';
+    }else {
+      $cher_mot='Cher';
+    }
+    $htmlContent = '
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Affectation de mot de passe par défault</title>
+        </head>
+        <body>
+            <h1>Affectation de mot de passe par défault</h1>
+            <p>'.$cher_mot.' '.$user_name.",</p>
+            <p>Nous vous remercions d'utiliser ResolveSphere. Voici votre mot de passe par défaut :".$user_password.'</p>
+            <p> Si vous voulez réinitialiser votre mot de passe clickez sur le lien ci-dessous : 
+            <a href="http://localhost/incidents_system_2/incidents_management_system_OCP/utilisateur/reset_password.php?user_email='.$user_email.'" style="display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
+        </body>
+        </html>
+    ';
+
+    $mail->Body = $htmlContent;
+
+    // Send the email
+    $mail->send();
+    echo "Hi3";
+    echo '<script>alert(Email sent successfully!)</script>';
+} catch (Exception $e) {
+    echo 'Email failed  ' . $mail->ErrorInfo;
+}
+}
+  // echo "<script>location.href='../RH/interface_RH.php';</script>";
 } else {
-  echo "Error: " . mysqli_error($connection);
+  echo "Hi error";
+  echo "Error: " . mysqli_error($conn);
 }
-}
+
+
+
+
 ?>
 
 

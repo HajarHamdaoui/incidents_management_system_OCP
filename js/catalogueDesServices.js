@@ -26,9 +26,10 @@ data.services.forEach(service => {
                     <div class="col col-1"><i class="fa-solid fa-briefcase"></i></div>
                     <div class="col col-2" id="col2-${i}" >     
                     </div>
-                    <div class="col col-3" > <button class="demander-button">Demander le service</button>             
+                    <div class="col col-3" > <a  href="demandeDeService.php?titre=${service.service}&catégorie=${service.catégorie}&description=${service.description}" >   <button class="demander-button">Demander le service</button></a>            
                     </div>
                     `;
+
                     list.append(tableRow);
                     let col2 =document.getElementById(`col2-${i}`);
                     console.log(col2);
